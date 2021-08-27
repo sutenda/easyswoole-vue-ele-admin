@@ -1,0 +1,10 @@
+{
+  "admin": {
+    "host": "mysql57",
+    "port": "3306",
+    "db": "admin_dev",
+    "username": "root",
+    "password": "",
+    "comment": "管理后台"
+  }
+}
