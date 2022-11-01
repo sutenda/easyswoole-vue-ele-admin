@@ -42,6 +42,12 @@ class User extends AdminBase
         $param = $this->json();
         $uid = $param['id'];
         unset($param['id']);
+        $info = AdminUser::create()->infoById($uid);
+        if(empty($param['password'])){
+            unset($param['password']);
+        }else{
+            $param['password'] = md5(md5($param['password']) . $info['salt']);
+        }
         $result = AdminUser::create()->updateUser($uid,$param);
         if(!$result)
         {

@@ -35,7 +35,7 @@ WORKDIR /easyswoole
 COPY ./ /easyswoole
 # install easyswoole
 RUN cd /easyswoole \
-#    && composer require easyswoole/easyswoole=${EASYSWOOLE_VERSION} \
+    && composer require easyswoole/easyswoole=${EASYSWOOLE_VERSION} \
     && php vendor/easyswoole/easyswoole/bin/easyswoole install
 
 #测试配置
